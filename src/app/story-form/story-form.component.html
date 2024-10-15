@@ -1,0 +1,34 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <h5>Add Story</h5>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="addStory()" class="form-inline">
+      <div class="form-group mb-2">
+        <label for="storyName" class="sr-only">Story Name</label>
+        <input
+          [(ngModel)]="storyName"
+          name="storyName"
+          id="storyName"
+          class="form-control mr-2"
+          placeholder="Story Name"
+          required
+        />
+      </div>
+      <div class="form-group mb-2">
+        <label for="storyPoints" class="sr-only">Story Points</label>
+        <input
+          [(ngModel)]="storyPoints"
+          name="storyPoints"
+          id="storyPoints"
+          type="number"
+          class="form-control mr-2"
+          placeholder="Story Points"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Add Story</button>
+    </form>
+    <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+  </div>
+</div>

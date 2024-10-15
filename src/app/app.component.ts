@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'scrum-planner';
+  stories: { name: string, points: number }[] = [];
+
+  addStory(story: { name: string, points: number }) {
+    // Prevent duplicates
+    if (!this.stories.find(s => s.name === story.name)) {
+      this.stories.push(story);
+    }
+  }
 }

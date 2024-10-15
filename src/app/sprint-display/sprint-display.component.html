@@ -1,0 +1,12 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <h5>Generated Sprint</h5>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li *ngFor="let story of selectedStories" class="list-group-item">
+        {{ story.name }} ({{ story.points }} points)
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <h5>Sprint Planner</h5>
+  </div>
+  <div class="card-body">
+    <form
+      (ngSubmit)="setSprintCapacity(sprintCapacity || 0)"
+      class="form-inline mb-3"
+    >
+      <div class="form-group">
+        <label for="sprintCapacity" class="sr-only">Sprint Capacity</label>
+        <input
+          [(ngModel)]="sprintCapacity"
+          type="number"
+          class="form-control mr-2"
+          id="sprintCapacity"
+          placeholder="Sprint Capacity"
+          required
+          name="capacity"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Set Sprint Capacity</button>
+    </form>
+
+    <div class="btn-group mb-3" role="group">
+      <button (click)="autoSelectStories()" class="btn btn-success">
+        Auto Select Stories
+      </button>
+      <button (click)="clearStories()" class="btn btn-danger">
+        Clear All Stories
+      </button>
+      <button (click)="clearSelectedStories()" class="btn btn-warning">
+        Clear Selected Stories
+      </button>
+    </div>
+
+    <h6>Selected Stories for Sprint:</h6>
+    <ul class="list-group">
+      <li *ngFor="let story of selectedStories" class="list-group-item">
+        {{ story.name }} ({{ story.points }} points)
+      </li>
+    </ul>
+  </div>
+</div>
