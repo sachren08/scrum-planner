@@ -1,0 +1,47 @@
+.card {
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    border-bottom: none;
+  }
+  
+  .form-inline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .form-control-lg {
+    width: 50%;
+    max-width: 300px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
